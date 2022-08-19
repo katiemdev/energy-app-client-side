@@ -1,0 +1,9 @@
+<h2 mat-dialog-title>{{ data.title }}</h2>
+<mat-dialog-content>{{ data.description }}</mat-dialog-content>
+<mat-dialog-actions *ngIf="data.tag == 'delete'">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true">Delete</button>
+</mat-dialog-actions>
+<mat-dialog-actions *ngIf="data.tag == 'alarm'">
+  <button mat-button [mat-dialog-close]="true">OK</button>
+</mat-dialog-actions>

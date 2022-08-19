@@ -1,0 +1,118 @@
+<!-- ADD-->
+<div *ngIf="data.tag == 'add'" class="container">
+  <h2 mat-dialog-title class="title">{{ data.title }}</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()" class="form">
+    <mat-form-field appearance="fill">
+      <mat-label for="name">Name:</mat-label>
+      <input
+        matInput
+        type="text"
+        name="name"
+        formControlName="name"
+        id="name"
+        placeholder="Name"
+        required
+      />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label for="description">Description:</mat-label>
+      <input
+        matInput
+        type="text"
+        name="description"
+        formControlName="description"
+        id="description"
+        placeholder="Description"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label for="name">Threshold:</mat-label>
+      <input
+        matInput
+        type="number"
+        name="threshold"
+        formControlName="threshold"
+        id="threshold"
+        placeholder="Threshold"
+        required
+      />
+    </mat-form-field>
+    <mat-dialog-actions class="buttons">
+      <button
+        mat-raised-button
+        type="submit"
+        mat-dialog-close
+        [disabled]="!this.addForm.valid"
+      >
+        Save Alarm
+      </button>
+      <button mat-raised-button type="button" [mat-dialog-close]="false">
+        Cancel
+      </button>
+    </mat-dialog-actions>
+  </form>
+</div>
+
+<!-- UPDATE -->
+<div *ngIf="data.tag == 'update'">
+  <h2 mat-dialog-title class="title">Edit Alarm</h2>
+  <form [formGroup]="updateForm" (ngSubmit)="onSubmit()" class="form">
+    <mat-form-field appearance="fill">
+      <mat-label for="name">Name:</mat-label>
+      <input
+        matInput
+        type="text"
+        name="name"
+        formControlName="name"
+        id="name"
+        placeholder="Name"
+        required
+      />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label for="description">Description:</mat-label>
+      <input
+        matInput
+        type="text"
+        name="description"
+        formControlName="description"
+        id="description"
+        placeholder="Description"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label for="name">Threshold:</mat-label>
+      <input
+        matInput
+        type="number"
+        name="threshold"
+        formControlName="threshold"
+        id="threshold"
+        placeholder="Threshold"
+        required
+      />
+    </mat-form-field>
+    <mat-dialog-actions class="buttons">
+      <button
+        mat-raised-button
+        type="submit"
+        mat-dialog-close
+        [disabled]="!this.updateForm.valid"
+      >
+        Update Alarm
+      </button>
+      <button
+        mat-raised-button
+        type="button"
+        (click)="deleteAlarm()"
+        mat-dialog-close
+        [disabled]="!this.updateForm.valid"
+      >
+        Delete
+      </button>
+      <button mat-raised-button type="button" [mat-dialog-close]="false">
+        Cancel
+      </button>
+    </mat-dialog-actions>
+  </form>
+</div>

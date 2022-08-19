@@ -1,0 +1,10 @@
+<button mat-raised-button (click)="toggleAddMonitor()" class="btn-monitor">
+  {{ showAddMonitor ? "Close" : "Add New Monitor" }}
+</button>
+<app-add-monitor (onAddMonitor)="addMonitor($event)"></app-add-monitor>
+
+<div class="monitor-container">
+  <app-monitor-item *ngFor="let monitor of monitors" [monitor]="monitor">
+    <p>Monitor Name: {{ monitor.name }}</p></app-monitor-item
+  >
+</div>

@@ -1,0 +1,19 @@
+<div class="container" *ngIf="user">
+  <mat-card>
+    <mat-card-header class="header">
+      <mat-card-title class="title">My Details</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="content">
+      <div></div>
+      <div class="content-text">
+        <p><b>Name:</b> {{ user.name }}</p>
+        <p><b>Email:</b> {{ user.email }}</p>
+        <p><b>Monitors:</b></p>
+        <ul *ngFor="let monitor of this.monitors" class="monitors">
+          <li>{{ monitor.name }}</li>
+        </ul>
+      </div>
+      <div></div>
+    </mat-card-content>
+  </mat-card>
+</div>

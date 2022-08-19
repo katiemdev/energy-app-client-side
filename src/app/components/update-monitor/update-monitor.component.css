@@ -1,0 +1,16 @@
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons button {
+  margin: 10px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+}

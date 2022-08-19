@@ -11,22 +11,37 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~13.2.0",
+    "@angular/cdk": "^13.2.4",
     "@angular/common": "~13.2.0",
     "@angular/compiler": "~13.2.0",
     "@angular/core": "~13.2.0",
     "@angular/forms": "~13.2.0",
+    "@angular/material": "^13.2.4",
     "@angular/platform-browser": "~13.2.0",
     "@angular/platform-browser-dynamic": "~13.2.0",
     "@angular/router": "~13.2.0",
+    "async": "^3.2.2",
+    "chart.js": "^3.7.1",
+    "chartjs-adapter-date-fns": "^2.0.0",
+    "chartjs-adapter-moment": "^1.0.0",
+    "date-fns": "^2.28.0",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.3",
+    "mongoose": "^6.2.4",
+    "ng2-charts": "^3.0.8",
     "rxjs": "~7.5.0",
-    "tslib": "^2.3.0",
+    "socket.io-client": "^4.4.1",
     "zone.js": "~0.11.4"
   },
+  "overrides": {
+    "async": "$async"
+  },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~13.2.0",
+    "@angular-devkit/build-angular": "^13.3.2",
     "@angular/cli": "~13.2.0",
     "@angular/compiler-cli": "~13.2.0",
     "@types/jasmine": "~3.10.0",
+    "@types/lodash": "^4.14.182",
     "@types/node": "^12.11.1",
     "jasmine-core": "~4.0.0",
     "karma": "~6.3.0",
@@ -34,6 +49,7 @@
     "karma-coverage": "~2.1.0",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "tslib": "^2.3.1",
     "typescript": "~4.5.2"
   }
 }

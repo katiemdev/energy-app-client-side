@@ -1,0 +1,68 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+mat-card-header.header {
+  margin: 10px 0;
+}
+
+.monitor {
+  text-align: left;
+}
+
+.monitor p {
+  font-size: 16px;
+}
+.monitor mat-card-title {
+  font-size: 26px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons button {
+  margin: 10px;
+}
+
+.content {
+  display: flex;
+}
+
+.chart {
+  flex: 1;
+}
+
+.monitor-info {
+  width: 200px;
+  margin: 0 50px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.actions > * {
+  width: 100%;
+  margin: 10px !important;
+}
+
+.item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item p {
+  margin: 0;
+}
+
+.icon {
+  font-size: 20px;
+}

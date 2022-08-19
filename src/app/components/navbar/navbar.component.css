@@ -1,0 +1,28 @@
+.nav {
+  background-color: #6bbf62;
+}
+
+.flex {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.icon {
+  color: white;
+  font-size: 40px;
+}
+
+button {
+  margin: 0 10px;
+}
+
+.nav-title {
+  font-size: 25px;
+  cursor: pointer;
+  color: white;
+  text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.42);
+}

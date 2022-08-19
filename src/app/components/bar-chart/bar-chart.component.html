@@ -1,0 +1,20 @@
+<div>
+  <canvas
+    baseChart
+    [data]="barChartData"
+    [type]="'bar'"
+    [options]="barChartOptions"
+  >
+  </canvas>
+  <div class="btn-container">
+    <button mat-raised-button (click)="changeTime('day')" value="day">
+      Day
+    </button>
+    <button mat-raised-button (click)="changeTime('week')" value="week">
+      Week
+    </button>
+    <button mat-raised-button (click)="changeTime('month')" value="month">
+      Month
+    </button>
+  </div>
+</div>

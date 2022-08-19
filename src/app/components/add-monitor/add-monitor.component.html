@@ -1,0 +1,30 @@
+<mat-card *ngIf="showAddMonitor" class="form-container">
+  <h2>Add a Monitor</h2>
+  <form (ngSubmit)="onSubmit()" [formGroup]="form" class="form">
+    <mat-form-field appearance="fill">
+      <mat-label for="name">Name:</mat-label>
+      <input
+        matInput
+        type="text"
+        name="name"
+        formControlName="name"
+        id="name"
+        placeholder="Name"
+        required
+      />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label for="description">Description:</mat-label>
+      <input
+        matInput
+        type="text"
+        name="description"
+        formControlName="description"
+        id="description"
+        placeholder="Description"
+        required
+      />
+    </mat-form-field>
+    <button mat-raised-button type="submit">Save Monitor</button>
+  </form>
+</mat-card>

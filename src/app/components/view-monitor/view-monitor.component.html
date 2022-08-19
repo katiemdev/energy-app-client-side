@@ -1,0 +1,43 @@
+<div *ngIf="monitor" class="container">
+  <mat-card class="monitor">
+    <mat-card-header class="header">
+      <mat-card-title>Monitor Name: {{ monitor.name }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="content">
+      <app-bar-chart class="chart" [monitor]="monitor"></app-bar-chart>
+      <div class="monitor-info">
+        <p><b>Description:</b> {{ monitor.description }}</p>
+        <p>
+          <b>Recent usage:</b>
+          {{ monitor.monitorData[monitor.monitorData.length - 1]?.usage }}kWh
+        </p>
+        <p><b>Average usage:</b> {{ monitor.average }}kWh</p>
+        <p><b>Alarms: </b></p>
+        <mat-list *ngIf="this.alarms.length">
+          <mat-list-item *ngFor="let alarm of this.alarms" class="item"
+            ><p matLine>{{ alarm.name }}</p>
+            <button mat-icon-button (click)="alarmInfo(alarm)">
+              <mat-icon class="icon">edit</mat-icon>
+            </button></mat-list-item
+          >
+        </mat-list>
+        <mat-card-actions class="actions">
+          <button mat-raised-button (click)="updateMonitor()">
+            Update Monitor
+          </button>
+          <button mat-raised-button (click)="onDelete(monitor)">
+            Delete Monitor
+          </button>
+          <button mat-raised-button (click)="addAlarm()">Add an alarm</button>
+        </mat-card-actions>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <button
+    mat-raised-button
+    [routerLink]="['/dashboard', user._id]"
+    routerLinkActive="monitor-item"
+  >
+    Go Back
+  </button>
+</div>

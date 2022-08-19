@@ -1,0 +1,33 @@
+<mat-toolbar color="primary" class="nav">
+  <mat-card-header>
+    <div (click)="navigate()" class="nav-title">Energy App</div>
+  </mat-card-header>
+  <span class="example-spacer"></span>
+  <button
+    *ngIf="currentUser"
+    mat-icon-button
+    [routerLink]="['/profile', currentUser._id]"
+    class="material-icons.md-24"
+  >
+    <mat-icon class="icon">account_circle</mat-icon>
+  </button>
+
+  <button
+    *ngIf="currentUser"
+    mat-raised-button
+    type="button"
+    [routerLink]="['/dashboard', currentUser._id]"
+  >
+    Dashboard
+  </button>
+
+  <button
+    mat-raised-button
+    (click)="logout()"
+    *ngIf="currentUser"
+    type="button"
+    class="btn btn-danger"
+  >
+    Logout
+  </button>
+</mat-toolbar>
